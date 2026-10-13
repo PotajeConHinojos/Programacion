@@ -1,8 +1,7 @@
-import java.util.Arrays;
 import java.util.Scanner;
 public class Main
 {
-    public static void main(String[] args) {
+     static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
        /*
         double[] numeros = new double[10];
@@ -61,7 +60,7 @@ public class Main
 
 
 
-    /*
+        /*
         //Ejercicio4
         double[] n4 = new double[20];
         double negativos = n4[0];
@@ -145,7 +144,130 @@ public class Main
             IO.println(valores[i]);
         }
         */
+        /*
         //Ejercicio8
-        double aleatorio[Math.random();] = new double[100]:
+        sc = new Scanner(System.in);
+        double aleatorios[] = new double[100];
+
+        for (int i = 0; i < aleatorios.length; i++) {
+            aleatorios[i] = Math.random();
+
+        }
+        IO.println("Introduce un valor real");
+        double r = sc.nextDouble();
+        int contador = 0;
+
+        for (int i = 1; i < aleatorios.length; i++)
+        {
+            if (aleatorios[i] >= r)
+            {
+            contador++;
+            }
+        }
+        IO.println("Hay " + contador + " números iguales o superiores a el valor real introducido");
+        */
+        //Ejercicio 9
+         /*
+        sc = new Scanner(System.in);
+        double aleatorios[] = new double[100];
+
+        for (int i = 0; i < aleatorios.length; i++)
+        {
+            aleatorios[i] = (int) (Math.random() * 10) + 1;
+            IO.println(aleatorios[i]);
+
+        }
+
+        IO.println("Introduce N");
+        double n = sc.nextDouble();
+        int contador = 0;
+        for (int i = 0; i < aleatorios.length; i++)
+        {
+            if (aleatorios[i] == n)
+            {
+                contador++;
+            }
+        }
+        IO.println(contador);
+             */
+        //Ejercicio10
+        /*
+        sc = new Scanner(System.in);
+        IO.println("Introduce el tamaño que quieras que tenga el array");
+        int N = sc.nextInt();
+        int altura = 0;
+        double tamanoArray []  = new double [N];
+        double suma = 0;
+        double media = 0;
+        int encima = 0;
+        int debajo = 0;
+
+        for (int i = 0; i < tamanoArray.length; i++)
+        {
+            IO.println("Introduce altura " + (i+1) );
+            tamanoArray[i] = sc.nextDouble();
+        }
+        double minimo = tamanoArray[0];
+        double maximo = tamanoArray[0];
+        for (int i = 0; i < tamanoArray.length; i++)
+        {
+            suma = suma + tamanoArray [i];
+
+            if (tamanoArray[i] > maximo)
+            {
+                maximo = tamanoArray[i];
+            }
+            if (tamanoArray[i] < minimo)
+            {
+                minimo = tamanoArray[i];
+            }
+        }
+        media = suma/tamanoArray.length;
+        for (int i = 0; i < tamanoArray.length; i++)
+        {
+            if (tamanoArray[i] < media)
+            {
+                debajo++;
+            }else if (tamanoArray[i] > media)
+                {
+                    encima++;
+                }
+        }
+
+        IO.println("La media de las alturas es: " + media);
+        IO.println("La altura mínima es: " + minimo);
+        IO.println("La altura máxima es: "  + maximo);
+        IO.println(encima + " personas están por encima de la media");
+        IO.println(debajo + " personaes están por debajo de la media");
+        */
+        /*
+        //Ejercicio11
+        int[] array1 = new int[100];
+        int[] array2 = new int[100];
+
+        for (int i = 0; i < array1.length; i++)
+        {
+            array1[i] = i + 1;
+        }
+
+        for (int i = 0; i < array1.length; i++)
+        {
+            array2[i] = array1[array1.length - 1 - i];
+        }
+
+        IO.println("Array1");
+        for (int i = 0; i < array1.length; i++)
+        {
+            IO.print(array1[i] + " ");
+        }
+        IO.println("Array2");
+        for (int i = 0; i < array2.length; i++)
+        {
+            IO.print(array2[i] + " ");
+        }
+        */
+
+        //Ejercicio12
+
     }
 }
