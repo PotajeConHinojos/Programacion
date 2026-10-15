@@ -1,13 +1,14 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Main
 {
      static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
        /*
-        double[] numeros = new double[10];
-        for (int i = 0; i < 10; i++)
+        double numeros[] = new double[10];
+        for (int i = 0; i < numeros.length; i++)
         {
-            IO.println("Introduce número " + (i + 1) + ":");
+            IO.println("Introduce número " + (i + 1) + ": ");
             numeros[i] = sc.nextDouble();
         }
         for (int i = 0; i < 10; i++)
@@ -15,64 +16,64 @@ public class Main
             IO.print(numeros[i] + " ");
         }
 
+        //for(double n : numeros) { IO.println(n)};
+
         //Ejercicio 2
-        /*sc = new Scanner(System.in);
+        sc = new Scanner(System.in);
         int[] n = new int[10];
-        int suma = 0;
-        for (int i = 0; i < 10; i++)
+        double suma = 0.0;
+        for (int i = 0; i < n.length; i++)
         {
             IO.println("Introduce número " + (i + 1) + ":");
             n[i] = sc.nextInt();
-        }
-        for (int i = 0; i < n.length; i++)
-        {
             suma = suma + n [i];
         }
-        IO.println(suma);
+         IO.println(suma);
+        */
 
-         /*
 
         //Ejercicio3
+         /*
         sc = new Scanner(System.in);
         double[] n1 = new double[10];
-        for (int i1 = 0; i1 < n1.length; i1++)
+        for (int i = 0; i < n1.length; i++)
         {
             IO.println("Introduce un número");
-            n1[i1] = sc.nextDouble();
+            n1[i] = sc.nextDouble();
         }
-        double maximo = n1[0];
-        double minimo = n1[0];
+        double maximo = - Double.MAX_VALUE; //Es = al numero mas pequeño posible "-" para que siempre el que se introduzca sea igual o mayor
+        double minimo = Double.MIN_VALUE;
 
-        for (int i1 = 1; i1 < n1.length; i1 ++)
+        for (int i = 1; i< n1.length; i ++)
         {
-            if (n1[i1] > maximo)
+            if (n1[i] > maximo)
             {
-                maximo = n1[i1];
+                maximo = n1[i];
             }
-            if (n1[i1] < minimo)
+            if (n1[i] < minimo)
             {
-                minimo = n1[i1];
+                minimo = n1[i];
             }
         }
+
+        // también: maximo = Math.max(n1[i], maximo);
         IO.println("El mínimo es: " + minimo);
         IO.println("El máximo es: "  + maximo);
-        */
+*/
 
 
 
         /*
         //Ejercicio4
-        double[] n4 = new double[20];
-        double negativos = n4[0];
-        double positivos = n4[0];
-        double sumaPos = 0;
-        double sumaNeg = 0;
+        int n4[] = new int[20];
+        int sumaPos = 0;
+        int sumaNeg = 0;
         sc = new Scanner(System.in);
 
         for (int i = 0; i < n4.length; i++)
         {
             IO.println("Introduce un número");
-            n4[i] = sc.nextDouble();
+            n4[i] = sc.nextInt();
             if (n4[i] < 0)
             {
                 sumaNeg = sumaNeg + n4[i];
@@ -85,13 +86,14 @@ public class Main
         IO.println("Suma de negativos: " + sumaNeg);
         IO.println("Suma de positivos: " + sumaPos);
         */
-        /*
+
         //Ejercicio5
+         /*
         sc = new Scanner(System.in);
         int[] n = new int[20];
         int suma = 0;
         double media=0;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < n.length; i++)
         {
             IO.println("Introduce número " + (i + 1) + ":");
             n[i] = sc.nextInt();
@@ -108,11 +110,11 @@ public class Main
         //Ejercicio6
         sc = new Scanner(System.in);
         int N = 0;
-        int M = 0;
+        double M = 0;
         IO.println("Introduce el tamaño que quieras que tenga el array");
         N = sc.nextInt();
         IO.println("Introduce lo que quieras que se escriba en el array");
-        M = sc.nextInt();
+        M = sc.nextDouble();
         double [] tamanoArray = new double[N];
 
         Arrays.fill(tamanoArray, M);
@@ -121,8 +123,8 @@ public class Main
         {
             IO.println(tamanoArray[i]);
         }
-        */
-        /*
+*/
+/*
         //Ejercicio 7
          sc = new Scanner(System.in);
 
@@ -132,18 +134,22 @@ public class Main
         IO.println("Introduce Q (Valor al que se llega):");
         int q = sc.nextInt();
 
-        int[] valores = new int[q - p +1];
+        int dimension = Math.abs(p - q) +1;
+        int valores[] = new int[dimension];
 
         for (int i = 0; i < valores.length; i++)
         {
-            valores[i] = p + i;
-        }
-
-        for (int i = 0; i < valores.length; i++)
-        {
+            if(q > p)
+            {
+                valores[i] = p+1;
+            }else {
+                valores[i] = q+1;
+            }
             IO.println(valores[i]);
         }
-        */
+*/
+
+
         /*
         //Ejercicio8
         sc = new Scanner(System.in);
@@ -157,7 +163,7 @@ public class Main
         double r = sc.nextDouble();
         int contador = 0;
 
-        for (int i = 1; i < aleatorios.length; i++)
+        for (int i = 1; i < aleatorios.length; i++) //for(double n : aleatorios
         {
             if (aleatorios[i] >= r)
             {
@@ -165,7 +171,7 @@ public class Main
             }
         }
         IO.println("Hay " + contador + " números iguales o superiores a el valor real introducido");
-        */
+
         //Ejercicio 9
          /*
         sc = new Scanner(System.in);
@@ -191,7 +197,7 @@ public class Main
         IO.println(contador);
              */
         //Ejercicio10
-        /*
+
         sc = new Scanner(System.in);
         IO.println("Introduce el tamaño que quieras que tenga el array");
         int N = sc.nextInt();
@@ -202,15 +208,14 @@ public class Main
         int encima = 0;
         int debajo = 0;
 
-        for (int i = 0; i < tamanoArray.length; i++)
-        {
-            IO.println("Introduce altura " + (i+1) );
-            tamanoArray[i] = sc.nextDouble();
-        }
         double minimo = tamanoArray[0];
         double maximo = tamanoArray[0];
         for (int i = 0; i < tamanoArray.length; i++)
         {
+            IO.println("Introduce altura " + (i+1) );
+
+            tamanoArray[i] = sc.nextDouble();
+
             suma = suma + tamanoArray [i];
 
             if (tamanoArray[i] > maximo)
@@ -228,7 +233,7 @@ public class Main
             if (tamanoArray[i] < media)
             {
                 debajo++;
-            }else if (tamanoArray[i] > media)
+            }else if (tamanoArray[i] >= media)
                 {
                     encima++;
                 }
@@ -237,9 +242,9 @@ public class Main
         IO.println("La media de las alturas es: " + media);
         IO.println("La altura mínima es: " + minimo);
         IO.println("La altura máxima es: "  + maximo);
-        IO.println(encima + " personas están por encima de la media");
+        IO.println(encima + " personas están por encima o en la media");
         IO.println(debajo + " personaes están por debajo de la media");
-        */
+
         /*
         //Ejercicio11
         int[] array1 = new int[100];
