@@ -197,7 +197,7 @@ public class Main
         IO.println(contador);
              */
         //Ejercicio10
-
+        /*
         sc = new Scanner(System.in);
         IO.println("Introduce el tamaño que quieras que tenga el array");
         int N = sc.nextInt();
@@ -243,12 +243,12 @@ public class Main
         IO.println("La altura mínima es: " + minimo);
         IO.println("La altura máxima es: "  + maximo);
         IO.println(encima + " personas están por encima o en la media");
-        IO.println(debajo + " personaes están por debajo de la media");
+        IO.println(debajo + " personas están por debajo de la media");
+        */
 
-        /*
         //Ejercicio11
-        int[] array1 = new int[100];
-        int[] array2 = new int[100];
+        int array1[] = new int[100];
+        int array2[] = new int[100];
 
         for (int i = 0; i < array1.length; i++)
         {
@@ -260,19 +260,95 @@ public class Main
             array2[i] = array1[array1.length - 1 - i];
         }
 
-        IO.println("Array1");
+        IO.println("Array1 y Array 2");
         for (int i = 0; i < array1.length; i++)
         {
             IO.print(array1[i] + " ");
-        }
-        IO.println("Array2");
-        for (int i = 0; i < array2.length; i++)
-        {
             IO.print(array2[i] + " ");
         }
-        */
 
         //Ejercicio12
 
+         sc = new Scanner(System.in);
+        int numerosEJ12[] = new int[10];
+         String opcion = "c";
+        do
+        {
+            IO.println("Bienvenido, escoja una de las opciones.");
+            IO.println("a) Mostrar valores");
+            IO.println("b) Introducir valor");
+            IO.println("x) Salir");
+            switch(opcion)
+            {
+                case "a" ->
+                {
+                    for (int i = 0; i < array1.length; i++)
+                    {
+                        IO.print(numerosEJ12[i] + " ");
+
+                    }
+
+                }
+                case "b" ->
+                {
+                    sc.nextLine();
+                    IO.println("Introduzca el valor del número entero.");
+                    int v = sc.nextInt();
+                    IO.println("Introduzca la posicion del array donde quiera instertar el valor.");
+                    int p = sc.nextInt();
+                    if (p <= 0 && p < numerosEJ12.length) {
+                        numerosEJ12[p] = v;
+                    } else {
+                        IO.print("No es un valor correcto");
+                    }
+                }
+                case "c" ->
+                {
+                IO.println("Po mevoy");
+                }
+                default ->{
+
+            }
+
+
+            }
+        }while (!opcion.equals("c"));
+
+
+        //Ejercicio13
+
+         sc = new Scanner(System.in);
+         IO.println("Introduce el valor inicial v:");
+         int v = sc.nextInt();
+         IO.println("Introduce el incremento");
+         int incremento = sc.nextInt();
+         IO.println("Introduce el número de elementos a crear");
+         int nEJ13 =sc.nextInt();
+
+         int numerosEJ13[] = new int[nEJ13];
+            numerosEJ13[0] = v;
+         for(int i = 1; i < numerosEJ13.length; i++)
+             {
+                 IO.println(numerosEJ13[i] = numerosEJ13[i-1] + incremento);
+
+             }
+
+
+         //Ejercicio 14
+        int numE14 = 10;
+         int tamanoArray = numE14 + (numE14 + 1) /2; //Formula suma serie
+        int numerosE14[] = new int[tamanoArray];
+
+        int posicionActual = 0;
+        for(int numero = 1; numero <= numE14; numero++)
+        {
+            for (int i = 0; i < numero; i++)
+            {
+                numerosE14[posicionActual] =numero;
+                posicionActual++;
+            }
+        }
+        IO.println(Arrays.toString(numerosE14));
     }
+
 }
