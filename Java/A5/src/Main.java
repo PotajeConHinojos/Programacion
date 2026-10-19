@@ -4,10 +4,10 @@ public class Main
     static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
+
+        //Ejercicio1 //Revisar github de anuar
+
         /*
-        //Ejercicio1
-
-
         IO.println("Introduce una cadena de texto");
         String texto = sc.nextLine();
 
@@ -24,9 +24,10 @@ public class Main
                 palabra = "";
             }
         }
+
         IO.println(palabra);
         */
-        /*
+/*
         //Ejercicio2
         IO.println("Introduce la primera cadena de texto");
         String texto1 = sc.nextLine();
@@ -36,8 +37,11 @@ public class Main
         if (texto1.equalsIgnoreCase(texto2))
         {
             IO.println("Las cadenas de texto son iguales");
-        }
-        */
+        }else
+            {
+             IO.println("Las cadenas de textos no son iguales");
+            }
+  */
         /*
         //Ejercicio3
         IO.println("Introduce nombre");
@@ -52,7 +56,64 @@ public class Main
         String s3= apellido2.substring(0,3);
 
         IO.println(s1.toUpperCase() + s2.toUpperCase() + s3.toUpperCase());
+*/
 
-         */
+
+        //Ejercicio4
+
+        sc = new Scanner(System.in);
+/*
+        int contadorDeA = 0, contadorDeE = 0, contadorDeI = 0, contadorDeO = 0, contadorDeU = 0;
+        System.out.println("Introduce una frase");
+        String texto = sc.nextLine();
+        texto = texto.toLowerCase();
+        for(int i = 0; i < texto.length(); i++)
+        {
+            char letra = texto.charAt(i);
+
+            if(letra == 'a')
+                {
+                contadorDeA++;
+                }
+            else if(letra == 'e')
+                {
+                contadorDeE++;
+                }
+            else if (letra == 'i')
+                {
+                contadorDeI++;
+                }
+            else if (letra == 'o')
+                {
+                contadorDeO++;
+                }
+            else if (letra == 'u')
+                {
+                contadorDeU++;
+                }
+        }
+        IO.println(" Nº de A´s: " + contadorDeA + " Nº de E´s: " + contadorDeE + " Nº de I´s: " +  contadorDeI + " Nº de O´s: " + contadorDeO + " Nº de U´s: " + contadorDeU);
+    */
+        //Ejercicio5
+        boolean Palindromo = false;
+        sc = new Scanner(System.in);
+        IO.println("Introduce una frase");
+        String frase = sc.nextLine();
+
+        String fraseProcesada = frase.replace(" ", "").toLowerCase();
+//comprobar si el primer y ultimo caracter son iguales, asi sucesivamente
+
+        int izquierda = 0;
+        int derecha = fraseProcesada.length() - 1;
+
+        while(izquierda < derecha)
+        {
+            if(fraseProcesada.charAt(izquierda) == fraseProcesada.charAt(derecha))
+            {
+                Palindromo = true;
+            }
+            izquierda++;
+            derecha--;
+        }
     }
 }
